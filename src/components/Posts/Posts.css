@@ -1,0 +1,144 @@
+.moreView {
+    margin: 16px 8px 24px;
+    padding: 16px 8px 24px;
+    background-color: #ebeeef;
+    border-radius: 4px;
+  }
+  
+  .heading {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .heading :first-child {
+    font-size: 20px;
+    color: #002f34;
+  }
+  
+  .heading :last-child {
+    font-size: 12px;
+    color: #002f34;
+  }
+  
+  .moreView .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Align to the left */
+    gap: 16px;
+  }
+  
+  .card {
+    margin-right: 0;
+    margin-bottom: 16px;
+    padding: 10px;
+    max-width: 240px; /* Adjusted width */
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+    flex: 1 0 100%; /* Stacks vertically on smaller screens */
+  }
+  
+  .card .image img {
+    height: 150px; /* Increased image size */
+    max-width: 100%;
+    object-fit: cover;
+  }
+  
+  .card .content .rate {
+    font-size: larger; /* Increased font size */
+    font-weight: bold;
+  }
+  
+  .card .content .kilometer,
+  .card .content .name {
+    font-size: medium; /* Increased font size */
+  }
+  
+  .card .date {
+    font-size: small;
+  }
+  
+  .recommendations {
+    margin: 16px 8px 24px;
+  }
+  
+  .recommendations .heading span {
+    font-size: 20px;
+  }
+  
+  /* Add a media query for smaller devices */
+  @media (max-width: 768px) {
+    .moreView,
+    .recommendations {
+      margin: 8px;
+      padding: 8px;
+    }
+  
+    .heading {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .card {
+      max-width: 100%;
+      width: 100%;
+      padding: 8px;
+      height: auto; /* Allow the height to adjust based on content */
+    }
+  
+    .card .image img {
+      height: 120px; /* Adjusted image size for smaller screens */
+    }
+  
+    .card .content .rate {
+      font-size: larger; /* Larger font size for rate */
+    }
+  
+    .card .content .kilometer,
+    .card .content .name {
+      font-size: larger; /* Larger font size for name and kilometer */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .heading :first-child {
+      font-size: 18px;
+    }
+  
+    .heading :last-child {
+      font-size: 10px;
+    }
+  
+    .card {
+      max-width: 100%;
+      width: 100%;
+      padding: 6px;
+      height: auto; /* Adjust height for very small screens */
+    }
+  
+    .card .image img {
+      height: 100px; /* Adjusted image size for very small screens */
+    }
+  
+    .card .content .rate {
+      font-size: larger; /* Larger font size for rate */
+    }
+  
+    .card .content .kilometer,
+    .card .content .name {
+      font-size: larger; /* Larger font size for name and kilometer */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .card .content .name {
+      font-size: larger; /* Larger font for names on bigger screens */
+    }
+  
+    .card .image img {
+      height: 150px; /* Larger images on bigger screens */
+    }
+  }
+  
